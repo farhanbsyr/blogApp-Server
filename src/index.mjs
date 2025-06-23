@@ -1,6 +1,6 @@
-import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
+import { createApp } from "./createApp.mjs";
 
 dotenv.config();
 
@@ -11,7 +11,7 @@ mongoose
   })
   .catch((err) => console.log(`Error: ${err}`));
 
-const app = express();
+const app = createApp();
 
 const PORT = process.env.PORT || 3000;
 
